@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SNAKE")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50d0d40b2850795ef17a75ffece0998fefb96610")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2f351cbe4eee3c95136c810f9b25bd78df92eafb")]
 [assembly: System.Reflection.AssemblyProductAttribute("SNAKE")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SNAKE")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
