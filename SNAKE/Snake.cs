@@ -181,28 +181,29 @@ class Program
             {
 
                 case ConsoleKey.UpArrow:
-
+                {
                     movement = "UP";
-
                     break;
+                }
 
                 case ConsoleKey.DownArrow:
-
+                {
                     movement = "DOWN";
+                    break;
+                }
 
-                    // ???
 
                 case ConsoleKey.LeftArrow:
-
+                {
                     movement = "LEFT";
-
                     break;
+                }
 
                 case ConsoleKey.RightArrow:
-
+                { 
                     movement = "RIGHT";
-
                     break;
+                }
 
             }
             //Logic of movement
