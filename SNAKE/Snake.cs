@@ -23,41 +23,41 @@ class Program
         Random randomnummer = new Random();
 
         //Shape of snake
-        pixel hoofd = new pixel();
+        Pixel head = new Pixel();
 
-        hoofd.xpos = screenwidth / 2;
+        head.xPos = screenwidth / 2;
 
-        hoofd.ypos = screenheight / 2;
+        head.yPos = screenheight / 2;
 
-        hoofd.schermkleur = ConsoleColor.Red;
+        head.ScreenColor = ConsoleColor.Red;
 
         string movement = "RIGHT";
 
-        List<int> telje = new List<int>();
+        List<int> countPosition = new List<int>();
 
         int score = 0;
 
-        Pixel hoofd = new Pixel();
+        //Pixel head1 = new Pixel();
 
-        hoofd.xPos = screenwidth / 2;
+        //head1.xPos = screenwidth / 2;
 
-        hoofd.yPos = screenheight / 2;
+        //head1.yPos = screenheight / 2;
 
-        hoofd.schermKleur = ConsoleColor.Red;
-
-
-
-        List<int> teljePositie = new List<int>();
+        //head1.ScreenColor = ConsoleColor.Red;
 
 
 
-        teljePositie.Add(hoofd.xPos);
-
-        teljePositie.Add(hoofd.yPos);
+        //List<int> teljePositie = new List<int>();
 
 
 
-        DateTime tijd = DateTime.Now;
+        countPosition.Add(head.xPos);
+
+        countPosition.Add(head.yPos);
+
+
+
+        DateTime time = DateTime.Now;
 
         string obstacle = "*";
 
@@ -84,7 +84,7 @@ class Program
 
             Console.ForegroundColor = ConsoleColor.Green;
 
-            Console.SetCursorPosition(hoofd.xPos, hoofd.yPos);
+            Console.SetCursorPosition(head.xPos, head.yPos);
 
             Console.Write("■");
 
@@ -142,11 +142,11 @@ class Program
 
             Console.Write("H");
 
-            for (int i = 0; i < telje.Count(); i++)
+            for (int i = 0; i < countPosition.Count(); i++)
 
             {
 
-                Console.SetCursorPosition(telje[i], telje[i + 1]);
+                Console.SetCursorPosition(countPosition[i], countPosition[i + 1]);
 
                 Console.Write("■");
 
@@ -154,19 +154,19 @@ class Program
 
             //Draw Snake
 
-            Console.SetCursorPosition(hoofd.xPos, hoofd.yPos);
+            Console.SetCursorPosition(head.xPos, head.yPos);
 
             Console.Write("■");
 
-            Console.SetCursorPosition(hoofd.xPos, hoofd.yPos);
+            Console.SetCursorPosition(head.xPos, head.yPos);
 
             Console.Write("■");
 
-            Console.SetCursorPosition(hoofd.xPos, hoofd.yPos);
+            Console.SetCursorPosition(head.xPos, head.yPos);
 
             Console.Write("■");
 
-            Console.SetCursorPosition(hoofd.xPos, hoofd.yPos);
+            Console.SetCursorPosition(head.xPos, head.yPos);
 
             Console.Write("■");
 
@@ -209,23 +209,23 @@ class Program
             //Logic of movement
             if (movement == "UP")
 
-                hoofd.yPos--;
+                head.yPos--;
 
             if (movement == "DOWN")
 
-                hoofd.yPos++;
+                head.yPos++;
 
             if (movement == "LEFT")
 
-                hoofd.xPos--;
+                head.xPos--;
 
             if (movement == "RIGHT")
 
-                hoofd.xPos++;
+                head.xPos++;
 
             //Eating obstacle
 
-            if (hoofd.xPos == obstacleXpos /* ?? */ == obstacleYpos)
+            if (head.xPos == obstacleXpos /* ?? */ == obstacleYpos)
 
             {
 
@@ -237,17 +237,17 @@ class Program
 
             }
 
-            teljePositie.Insert(0, hoofd.xPos);
+            countPosition.Insert(0, head.xPos);
 
-            teljePositie.Insert(1, hoofd.yPos);
+            countPosition.Insert(1, head.yPos);
 
-            teljePositie.RemoveAt(teljePositie.Count - 1);
+            countPosition.RemoveAt(countPosition.Count - 1);
 
-            teljePositie.RemoveAt(teljePositie.Count - 1);
+            countPosition.RemoveAt(countPosition.Count - 1);
 
             //Collision with walls or with oneself
 
-            if (hoofd.xPos == 0 || hoofd.xPos == screenwidth - 1 || hoofd.yPos == 0 || hoofd.yPos == screenheight - 1)
+            if (head.xPos == 0 || head.xPos == screenwidth - 1 || head.yPos == 0 || head.yPos == screenheight - 1)
 
             {
 
@@ -269,11 +269,11 @@ class Program
 
             }
 
-            for (int i = 0; i < telje.Count(); i += 2)
+            for (int i = 0; i < countPosition.Count(); i += 2)
 
             {
 
-                if (hoofd.xPos == telje[i] && hoofd.yPos == telje[i + 1])
+                if (head.xPos == countPosition[i] && head.yPos == countPosition[i + 1])
 
                 {
 
@@ -287,7 +287,7 @@ class Program
 
                     Console.SetCursorPosition(screenwidth / 5, screenheight / 2 + 1);
 
-                    Console.WriteLine("Dein Score ist: " + score);
+                    Console.WriteLine("Your score is: " + score);
 
                     Console.SetCursorPosition(screenwidth / 5, screenheight / 2 + 2);
 

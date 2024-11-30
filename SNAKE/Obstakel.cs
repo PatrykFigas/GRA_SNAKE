@@ -1,4 +1,4 @@
-public class Obstakel
+public class Obstacle
 
 {
 
