@@ -10,7 +10,7 @@ class Program
     static void Main()
 
     {
-
+        //Settings console
         Console.WindowHeight = 16;
 
         Console.WindowWidth = 32;
@@ -19,8 +19,10 @@ class Program
 
         int screenheight = Console.WindowHeight;
 
+        
         Random randomnummer = new Random();
 
+        //Shape of snake
         pixel hoofd = new pixel();
 
         hoofd.xpos = screenwidth / 2;
@@ -59,6 +61,7 @@ class Program
 
         string obstacle = "*";
 
+        //Obstacle settings
         int obstacleXpos = randomnummer.Next(1, screenwidth);
 
         int obstacleYpos = randomnummer.Next(1, screenheight);
@@ -89,6 +92,8 @@ class Program
 
             Console.ForegroundColor = ConsoleColor.White;
 
+            // Drawing board
+            //Top and bottom walls
             for (int i = 0; i < screenwidth; i++)
 
             {
@@ -98,7 +103,7 @@ class Program
                 Console.Write("■");
 
             }
-
+            //Side walls
             for (int i = 0; i < screenwidth; i++)
 
             {
@@ -169,7 +174,7 @@ class Program
 
             ConsoleKeyInfo info = Console.ReadKey();
 
-            //Game Logic
+            //Snake's movement
 
             switch (info.Key)
 
@@ -200,7 +205,7 @@ class Program
                     break;
 
             }
-
+            //Logic of movement
             if (movement == "UP")
 
                 hoofd.yPos--;
@@ -217,7 +222,7 @@ class Program
 
                 hoofd.xPos++;
 
-            //Hitting in obstacle
+            //Eating obstacle
 
             if (hoofd.xPos == obstacleXpos /* ?? */ == obstacleYpos)
 
