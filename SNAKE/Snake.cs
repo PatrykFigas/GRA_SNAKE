@@ -65,7 +65,7 @@ class Program
 
             Console.SetCursorPosition(0, screenheight-5);
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("Score: " + score);
+            Console.WriteLine("\tScore: " + score);
 
             // Control snake movement
             if (Console.KeyAvailable)
@@ -161,7 +161,7 @@ class Program
             snake.RemoveAt(snake.Count - 1);
 
             // Sleep to make the game playable
-            Thread.Sleep(100);
+            Thread.Sleep(200);
         }
     }
 
