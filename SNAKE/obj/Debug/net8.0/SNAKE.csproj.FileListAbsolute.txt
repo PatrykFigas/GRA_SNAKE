@@ -1,0 +1,4 @@
+C:\Users\patry\Desktop\GRA_SNAKE\SNAKE\obj\Debug\net8.0\SNAKE.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\patry\Desktop\GRA_SNAKE\SNAKE\obj\Debug\net8.0\SNAKE.AssemblyInfoInputs.cache
+C:\Users\patry\Desktop\GRA_SNAKE\SNAKE\obj\Debug\net8.0\SNAKE.AssemblyInfo.cs
+C:\Users\patry\Desktop\GRA_SNAKE\SNAKE\obj\Debug\net8.0\SNAKE.csproj.CoreCompileInputs.cache
