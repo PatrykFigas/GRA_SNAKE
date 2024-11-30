@@ -6,14 +6,11 @@ class Program
         Console.WindowWidth = 100;  // Szerokość okna konsoli
         Console.WindowHeight = 40;  // Wysokość okna konsoli
 
-        Console.BufferWidth = 100;  // Szerokość bufora
-        Console.BufferHeight = 40;  // Wysokość bufora
+    
         int screenwidth = Console.WindowWidth;
         int screenheight = Console.WindowHeight;
 
-        //// Ustawienie minimalnej wielkości okna konsoli
-        //Console.WindowHeight = Math.Max(16, screenheight); // Upewnij się, że wysokość nie jest mniejsza niż 16
-        //Console.WindowWidth = Math.Max(32, screenwidth); // Upewnij się, że szerokość nie jest mniejsza niż 32
+ 
 
 
         Random random = new Random();
@@ -27,7 +24,7 @@ class Program
 
         // Create obstacles
         List<Obstacle> obstacles = new List<Obstacle>();
-        for (int i = 0; i < 3; i++) // Create 3 obstacles
+        for (int i = 0; i < 6; i++) // Create 6 obstacles
         {
             obstacles.Add(new Obstacle(random.Next(1, screenwidth - 1), random.Next(1, screenheight - 1), ConsoleColor.Cyan, "*"));
         }
@@ -143,7 +140,7 @@ class Program
                 if (newHead.xPos == obstacle.Xpos && newHead.yPos == obstacle.Ypos)
                 {
                     score++;
-                    return;
+                    
                 }
             }
 
