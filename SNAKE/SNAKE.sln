@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SNAKE", "SNAKE.csproj", "{933861F7-AE40-4BF0-BA59-E054018ECB15}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SNAKE", "SNAKE.csproj", "{2DDF4733-2FFA-4934-998F-062B71D38372}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{933861F7-AE40-4BF0-BA59-E054018ECB15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{933861F7-AE40-4BF0-BA59-E054018ECB15}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{933861F7-AE40-4BF0-BA59-E054018ECB15}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{933861F7-AE40-4BF0-BA59-E054018ECB15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DDF4733-2FFA-4934-998F-062B71D38372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DDF4733-2FFA-4934-998F-062B71D38372}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DDF4733-2FFA-4934-998F-062B71D38372}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DDF4733-2FFA-4934-998F-062B71D38372}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {EBF13E63-045B-416D-A90F-A303F07166A5}
+		SolutionGuid = {4DC98915-EF68-4668-BE70-A6CDB73BE5D6}
 	EndGlobalSection
 EndGlobal
