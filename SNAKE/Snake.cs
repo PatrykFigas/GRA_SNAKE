@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading;
 
 class Program
-
 {
 
     static void Main()
@@ -225,8 +224,7 @@ class Program
 
             //Eating obstacle
 
-            if (head.xPos == obstacleXpos /* ?? */ == obstacleYpos)
-
+            if (head.xPos == obstacleXpos && head.yPos == obstacleYpos)
             {
 
                 score++;
@@ -248,7 +246,6 @@ class Program
             //Collision with walls or with oneself
 
             if (head.xPos == 0 || head.xPos == screenwidth - 1 || head.yPos == 0 || head.yPos == screenheight - 1)
-
             {
 
                 Console.Clear();
@@ -261,7 +258,7 @@ class Program
 
                 Console.SetCursorPosition(screenwidth / 5, screenheight / 2 + 1);
 
-                Console.WriteLine("Dein Score ist: " + score);
+                Console.WriteLine("Your score is: " + score);
 
                 Console.SetCursorPosition(screenwidth / 5, screenheight / 2 + 2);
 
@@ -270,11 +267,9 @@ class Program
             }
 
             for (int i = 0; i < countPosition.Count(); i += 2)
-
             {
 
                 if (head.xPos == countPosition[i] && head.yPos == countPosition[i + 1])
-
                 {
 
                     Console.Clear();
